@@ -8,21 +8,14 @@ export default function ResultPage({
   const fullUrl = `${domain}/${code}`;
 
   return (
-    <div
-      style={{
-        maxWidth: 600,
-        margin: "0 auto",
-        padding: "2rem",
-        textAlign: "center",
-      }}
-    >
-      <h1>URL Kısaltıldı!</h1>
-      <p>Kısaltılmış URL:</p>
+    <div className="max-w-xl mx-auto p-8 text-center">
+      <h1 className="text-3xl font-bold mb-4">URL Shortened!</h1>
+      <p className="mb-4">Your shortened URL is:</p>
       <a
         href={fullUrl}
         target="_blank"
         rel="noopener noreferrer"
-        style={{ fontSize: "1.2rem", color: "blue" }}
+        className="text-xl text-blue-500 hover:underline"
       >
         {fullUrl}
       </a>

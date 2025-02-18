@@ -13,7 +13,7 @@ function generateRandomCode(length = 6) {
   return result;
 }
 
-export async function createShortURL(formData) {
+export async function createShortURL(formData: FormData) {
   const longUrl = formData.get("longUrl");
   if (!longUrl) {
     throw new Error("URL gereklidir");
